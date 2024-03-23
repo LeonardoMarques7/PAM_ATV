@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="clicado()" id="button1">Clique aqui!</button>
+
+        <p id="paragrafo"></p>
+    
+        <form id="meuForm">
+            <div>
+                <label for="nome">Nome</label><br>
+                <input type="text" id="nome" name="nome">
+            </div>
+            
+            <input type="submit" id="buttonEnviar" value="Enviar">
+            <div class="text"></div>
+        </form>
+        
+    
+        <button id="demo" onmouseover="changeColor()">Passe o mouse aqui</button>
+    
+        <form id="segundoForm">
+            <label for="profissao">Profissão:</label>
+            <input type="text" id="profissao" name="profissao">
+            <button type="submit" id="buttonEnviar2">Enviar</button>
+            <div id="profissaoDisplay"></div>
+        </form>
+        
+        <div class="contador-container">
+            <button id="contadorBtn">Clique Aqui</button>
+            <div id="contadorDisplay">0</div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
+<script src="./js/script.js"></script>

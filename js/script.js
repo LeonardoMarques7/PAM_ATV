@@ -8,7 +8,7 @@ function clicado() {
 
 //  3)  De exemplo dos seguintes formas de trabalhar com DOM(Document Object Model), e explique: document.getElementById();
 const paragrafo = document.getElementById("paragrafo"); 
-paragrafo.innerHTML= "Hello World";
+paragrafo.innerHTML= "Hello World pelo DOM";
 
 // Pegamos o elemento pelo id e exibimos uma mensagem dentro dele, agora faremos um de form
 
@@ -19,7 +19,13 @@ button.addEventListener("click", function(event) {
 
     var nome = document.getElementById("nome").value;
 
-    text.innerHTML = "Seu nome é " + nome;
+    if(nome === "") {
+        text.innerHTML = "Sem nome";
+    } else {
+        text.innerHTML = "Seu nome é " + nome;
+    }
+
+    
 })
 
 // 4) Descreva e crie exemplos com suas formas diferente eventos no javascript,segue alguns exemplo: onmouseover
@@ -34,8 +40,14 @@ const button2 = document.querySelector("#buttonEnviar2").addEventListener("click
 
     var profissao = document.getElementById("profissao").value;
     var profissaoDisplay = document.getElementById("profissaoDisplay");
+
+    if(profissao === "") {
+        profissaoDisplay.innerHTML = "Sem profissão";
+    } else {
+        profissaoDisplay.innerHTML = "Sua profissão é " + profissao;
+    }
     
-    profissaoDisplay.innerHTML = "Sua profissão é " + profissao;
+    
 });
 
 // 6)  Desenvolva um script qua ao clicar no botão conta o numero de vezes clicado, em que seja separado o HTML e o JavaScript.

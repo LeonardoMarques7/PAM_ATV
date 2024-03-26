@@ -11,25 +11,24 @@ function clicado() {
 // Usando document.getElementById(), ele pega o elemento pelo ID
 document.getElementById("outputById").innerText = "Hello World (getElementById)";
 
-// Usando document.getElementsByTagName(), ele pega o elemento pelo nome da sua tag
+// Usando document.getElementsByTagName()
 var divsByTagName = document.getElementsByTagName("div");
 divsByTagName[1].innerText = "Hello World (getElementsByTagName)";
 
-// Usando document.getElementsByClassName(), ele pega o elemento por sua classe
+// Usando document.getElementsByClassName()
 var divsByClassName = document.getElementsByClassName("outputByClassName");
 divsByClassName[0].innerText = "Hello World (getElementsByClassName)";
 
-// Usando document.querySelector(), seletor CSS especificado
+// Usando document.querySelector()
 var divByQuerySelector = document.querySelector(".outputByQuerySelector");
 divByQuerySelector.innerText = "Hello World (querySelector)";
 
-// Usando document.querySelectorAll(), seletor CSS especificado, em uma NodeList (objeto semelhante a um array)
+// Usando document.querySelectorAll()
 var divsByQuerySelectorAll = document.querySelectorAll(".outputByQuerySelectorAll");
 divsByQuerySelectorAll.forEach(function(element) {
     element.innerText = "Hello World (querySelectorAll)";
 });
 
-paragrafo3.innerHTML = "Hello World pelo getElementsByClassName";
 
 
 const text = document.querySelector(".text");

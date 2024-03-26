@@ -6,11 +6,31 @@ function clicado() {
     alert("Botão foi clicado!");
 }
 
-//  3)  De exemplo dos seguintes formas de trabalhar com DOM(Document Object Model), e explique: document.getElementById();
-const paragrafo = document.getElementById("paragrafo"); 
-paragrafo.innerHTML= "Hello World pelo DOM";
+//  3)  De exemplo dos seguintes formas de trabalhar com DOM(Document Object Model), e explique: 
 
-// Pegamos o elemento pelo id e exibimos uma mensagem dentro dele, agora faremos um de form
+// Usando document.getElementById(), ele pega o elemento pelo ID
+document.getElementById("outputById").innerText = "Hello World (getElementById)";
+
+// Usando document.getElementsByTagName(), ele pega o elemento pelo nome da sua tag
+var divsByTagName = document.getElementsByTagName("div");
+divsByTagName[1].innerText = "Hello World (getElementsByTagName)";
+
+// Usando document.getElementsByClassName(), ele pega o elemento por sua classe
+var divsByClassName = document.getElementsByClassName("outputByClassName");
+divsByClassName[0].innerText = "Hello World (getElementsByClassName)";
+
+// Usando document.querySelector(), seletor CSS especificado
+var divByQuerySelector = document.querySelector(".outputByQuerySelector");
+divByQuerySelector.innerText = "Hello World (querySelector)";
+
+// Usando document.querySelectorAll(), seletor CSS especificado, em uma NodeList (objeto semelhante a um array)
+var divsByQuerySelectorAll = document.querySelectorAll(".outputByQuerySelectorAll");
+divsByQuerySelectorAll.forEach(function(element) {
+    element.innerText = "Hello World (querySelectorAll)";
+});
+
+paragrafo3.innerHTML = "Hello World pelo getElementsByClassName";
+
 
 const text = document.querySelector(".text");
 const button = document.querySelector("#buttonEnviar");
